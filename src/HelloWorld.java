@@ -34,9 +34,11 @@ public class HelloWorld {
 //
 
 //        myNumber = 123L;
+//        System.out.print(myNumber);
 //      Change your code to assign the value 123L (Note the 'L' at the end) to myNumber.
 //
 //        myNumber = 123;
+//        System.out.print(myNumber);
 //      Change your code to assign the value 123 to myNumber.
 //
 
