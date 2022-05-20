@@ -1,11 +1,41 @@
+import java.util.Scanner;
+import java.io.*;
 public class Bob {
-    //    Create a class named Bob with a main method for the following exercise.
-//
+    public static void main(String[] args) {
+        talkToBob();
+    }
 
+    static void talkToBob() {
+        Scanner scanner = new Scanner(System.in);
+//        Object nullString = null;
+//        String emptyString = "";
+        String spaceString = " ";
 
 
 //    Bob is a lackadaisical teenager. In conversation, his responses are very limited.
 //
+
+        String userInput = scanner.next();
+        int userInputIndex = (userInput.length() - 1);
+        if (userInput.charAt(userInputIndex) == '?') {
+            System.out.println("Sure.");
+        } else if (userInput.charAt(userInputIndex) == '!') {
+            System.out.println("Whoa, chill out!");
+        } else if (userInput.equals(spaceString)) {
+            System.out.println("Fine. Be that way!");
+        } else {
+            System.out.println("Whatever.");
+        }
+    }
+}
+    //    Create a class named Bob with a main method for the following exercise.
+//
+
+
+//    int j;
+//        for (j = 1; j <= userInput; j++) {
+//        System.out.println(j + " base value " + j * j + " squared " + j * j * j + " cubed ");
+//    }
 //    Bob answers 'Sure.' if you ask him a question. (the input ends with a question mark)
 //    He answers 'Whoa, chill out!' if you yell at him. (the input ends with an exclamation mark)
 //    He says 'Fine. Be that way!' if you address him without actually saying anything. (empty input)
@@ -14,21 +44,6 @@ public class Bob {
 //
 //
 //}
-}
 
-//const getSeconds = setInterval(function (){
-//        const date = new Date();
-//        console.log(date);
-//        const seconds = date.getSeconds();
-//        console.log(seconds);
-//        return seconds;
-//        }, 1000);
-//        console.log(getSeconds);
-//        let colorPercentage = 6 * getSeconds;
-//        console.log(colorPercentage);
-//        if (getSeconds > 59) {
-//            console.log(getSeconds);
-//            clearInterval(getSeconds);
-//            let colorPercentage = 6 * getSeconds;
-//        console.log(colorPercentage);
-//        }
+
+
