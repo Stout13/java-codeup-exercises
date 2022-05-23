@@ -26,7 +26,10 @@ public class classExample23May {
     public static int sumArray(int[] arr1) {
 //        int i = 0;
         int sum = 0;
-        for (int i = 0; i < arr1.length; i++) {
+//        for (int i = 0; i < arr1.length; i++) {
+//            sum += arr1[i];
+//        }
+        for (int i: arr1) {
             sum += arr1[i];
         }
         return sum;
