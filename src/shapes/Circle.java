@@ -1,5 +1,7 @@
 package shapes;
 
+import java.util.Scanner;
+
 public class Circle {
     double pi = Math.PI;
     private double radius;
@@ -7,20 +9,20 @@ public class Circle {
     public Circle(double radius1) {
         radius = radius1;
     }
-
     public static void main(String[] args) {
         Circle round = new Circle(13);
     }
-
-    public double getArea(double radius) {
+    public void setRadius() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("please input the integer for the length of radius of the circle");
+        this.radius = scanner.nextInt();
+    }
+    public double getArea() {
         //        System.out.println("welcome " + name);
         return pi*(radius*radius);
     }
-
-
-
     public double getRadius() {
-        return round.radius;
+        return this.radius;
     }
 }
 
