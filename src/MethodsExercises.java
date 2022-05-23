@@ -1,16 +1,25 @@
 import java.util.Scanner;
+import java.lang.Integer;
+
 
 public class MethodsExercises {
     public static void main(String[] args) {
+//        Calculator();
     }
-    public static Scanner scanner = new Scanner(System.in);
 
-    public static int functionSelection(){
 
+
+
+
+    public static int functionSelection() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to 1:Add, 2: Subtract, 3: Multiply, 4:Divide?");
-        if (scanner.nextInt() == 1 || scanner.nextInt() == 2 || scanner.nextInt() == 3  || scanner.nextInt() == 4) {
-            return scanner.nextInt();
+        if (!(scanner.nextInt() == 1 || scanner.nextInt() == 2 || scanner.nextInt() == 3 || scanner.nextInt() == 4)) {
+            functionSelection();
+        }
+        return scanner.nextInt();
     }
+
     //const getSeconds = setInterval(function (){
 //        const date = new Date();
 //        console.log(date);
@@ -31,12 +40,26 @@ public class MethodsExercises {
 //    Test your code by creating a main method and calling each of the methods you've created.
 //
 //    Basic Arithmetic
+    public static int Multiplication(int num1, int num2) {
+        return num1 * num2;
+    }
+
+    public static int Subtraction(int num1, int num2) {
+        return num1 - num2;
+    }
+
+    public static int Addition(int num1, int num2) {
+        return num1 * num2;
+    }
+    public static float Division(float float1, float float2) {
+        return float1 / float2;
+        }
     public static void Calculator() {
-
-
+        Scanner scanner = new Scanner(System.in);
         int functionSelection = functionSelection();
+//        String response;
         System.out.println("What is the first number to ");
-        switch(functionSelection) {
+        switch (functionSelection) {
             case 1:
                 System.out.print("add");
             case 2:
@@ -49,7 +72,7 @@ public class MethodsExercises {
         int num1 = scanner.nextInt();
 
         System.out.println("What is the second number to ");
-        switch(functionSelection) {
+        switch (functionSelection) {
             case 1:
                 System.out.print("add");
             case 2:
@@ -59,18 +82,65 @@ public class MethodsExercises {
             case 4:
                 System.out.println("divide");
         }
+
         int num2 = scanner.nextInt();
+//
         System.out.println("The answer is");
-        switch(functionSelection) {
+        int response;
+//        float divide;
+        switch (functionSelection) {
             case 1:
-                Addition(num1, num2);
+                response = Integer.parseInt(Integer.toString(Addition(num1, num2)));
+                System.out.println(response);
             case 2:
-                Subtraction(num1, num2);
+                response = Integer.parseInt(Integer.toString(Subtraction(num1, num2)));
+                System.out.println(response);
             case 3:
-                System.out.println("multiply");
+                response = Integer.parseInt(Integer.toString(Multiplication(num1, num2)));
+                System.out.println(response);
             case 4:
-                System.out.println("divide");
+                float float1 = (float) num1;
+                float float2 = (float) num2;
+
+                response = Integer.parseInt(Float.toString(Division(float1, float2)));
+                System.out.println(response);
+            case 5:
+                Calculator();
         }
+//        public static int Addition (num1, num2){
+//            System.out.println(" subtract?");
+//            int num1 = scanner.nextInt();
+//
+//            System.out.println("What is the second number to subtract?");
+//            int num2 = scanner.nextInt();
+//            return num1 + num2;
+//        }
+        ;
+
+//        public static int Subtraction () {
+//            Scanner scanner = new Scanner(System.in);
+//
+//            System.out.println(" subtract?");
+//            int num1 = scanner.nextInt();
+//
+//            System.out.println("What is the second number to subtract?");
+//            int num2 = scanner.nextInt();
+//
+//            return num1 - num2;
+//        }
+//    }
+//
+//    private int Multiplication(num1, num2) {
+//        return num1*num2;
+//    }
+//
+//    private int Subtraction(int num1, int num2) {
+//        return num1-num2;
+//    }
+//
+//    private int Addition(int num1, int num2) {
+//        return num1 * num2;
+//    }
 //
 //
 //        }
@@ -106,44 +176,30 @@ public class MethodsExercises {
 //        else {
 //            System.out.println("please select a valid option");
 //        }
-
-    public static int Addition(num1, num2) {
-        return num1 + num2;
-    };
-
-    public static int Subtraction() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(" subtract?");
-        int num1 = scanner.nextInt();
-
-        System.out.println("What is the second number to subtract?");
-        int num2 = scanner.nextInt();
-
-        return num1 - num2;
-    }
-
-    public static int Multiplication() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(" multiply?");
-        int num1 = scanner.nextInt();
-
-        System.out.println("What is the second number to multiply?");
-        int num2 = scanner.nextInt();
-        return num1 * num2;
-    }
-
-    public static float Division() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(" divide?");
-        float num1 = scanner.nextInt();
-
-        System.out.println("What is the second number to divide?");
-        float num2 = scanner.nextInt();
-        return num1 * num2;
-    }
+//
+//
+//
+//    public static int Multiplication() {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println(" multiply?");
+//        int num1 = scanner.nextInt();
+//
+//        System.out.println("What is the second number to multiply?");
+//        int num2 = scanner.nextInt();
+//        return num1 * num2;
+//    }
+//
+//    public static float Division() {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println(" divide?");
+//        float num1 = scanner.nextInt();
+//
+//        System.out.println("What is the second number to divide?");
+//        float num2 = scanner.nextInt();
+//        return num1 * num2;
+//    }
 
 //
 //    Create four separate methods. Each will perform an arithmetic operation:
@@ -165,8 +221,8 @@ public class MethodsExercises {
 //
 //    Create your multiplication method without the * operator (Hint: a loop might be helpful).
 //    Do the above with recursion.
-
-    public static boolean verifyInteger() {
+    }
+    public static boolean verifyInteger () {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your positive or negative integer of int type -2,147,483,648 to 2,147,483,647");
         long newInt = scanner.nextLong();
@@ -208,7 +264,7 @@ public class MethodsExercises {
 //
 //    Calculate the factorial of a number.
 
-    public static float factorial() {
+    public static float factorial () {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your positive or negative integer of int type -2,147,483,648 to 2,147,483,647");
         float num = scanner.nextInt();
@@ -245,7 +301,7 @@ public class MethodsExercises {
 //    Use recursion to implement the factorial.
 
 
-    public static void dice() {
+    public static void dice () {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter the number of faces of die one");
