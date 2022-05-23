@@ -1,5 +1,6 @@
 import javax.xml.namespace.QName;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Person {
     private String name;
@@ -9,11 +10,11 @@ public class Person {
         this.name = name;
     }
     public Person(String person) {
-        name = person;
+        this.name = person;
     }
     public static void main(String[] args) {
         Person alex = new Person("Alex");
-        System.out.println(alex.name);
+//        System.out.println(alex.name);
     }
     public String getName() {
 //        System.out.println("welcome " + name);

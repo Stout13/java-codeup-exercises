@@ -16,13 +16,14 @@ public class classExample23May {
         weather[2] = "cloudy";
         System.out.println(weather);
     }
-
     public static void dailySteps() {
         long[] dailySteps = {10000, 20000, 15000, 8000, 25000, 2000, 8000};
         System.out.println(Arrays.toString(dailySteps));
-
     }
-
+    public static void makeArray() {
+        int[] arr = {1, 2, 3, 4};
+        System.out.println("sum of array ints is " + sumArray(arr));
+    }
     public static int sumArray(int[] arr1) {
 //        int i = 0;
         int sum = 0;
@@ -33,11 +34,6 @@ public class classExample23May {
             sum += arr1[i];
         }
         return sum;
-    }
-
-    public static void makeArray() {
-        int[] arr = {1, 2, 3, 4};
-        System.out.println("sum of array ints is " + sumArray(arr));
     }
 }
 
