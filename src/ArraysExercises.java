@@ -28,7 +28,6 @@ public class ArraysExercises {
 //        What happens when you run the following code? Why is Arrays.toString necessary?
 //
     }
-
     public static Person[] makePeople() {
         Person Bob = new Person("Bob");
         Person Sarah = new Person("Sarah");
