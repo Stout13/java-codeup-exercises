@@ -10,8 +10,14 @@ public class Rectangle {
 //    }
 
     public static void main(String[] args) {
+        Rectangle tangle = new Rectangle();
+        Rectangle untangle = new Rectangle(7, 7);
     }
     public Rectangle(){
+    }
+    public Rectangle(double len, double wid) {
+        length = len;
+        width = wid;
     }
     public double getPerimeter(){
         return this.length*2 + this.width*2;
