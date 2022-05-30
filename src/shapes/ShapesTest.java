@@ -13,10 +13,9 @@ public class ShapesTest {
     public double getPerimeter() {
         return 0;
     }
-
 //    @Override
     public double getArea() {
         return 0;
     }
-};
+}
 //    myShape = Rectangle bob = new Rectangle(5,7);
