@@ -17,7 +17,6 @@ public class GradesApplication extends Student {
         System.out.println(Mark.grades);
         System.out.println(Mark.getGradeAverage());
 
-
         Student Sarah = new Student("Sarah");
         System.out.println(Sarah.grades);
         Integer[] SarahsGrades = new Integer[]{90, 92, 93, 88, 94, 70};
@@ -49,10 +48,28 @@ public class GradesApplication extends Student {
         System.out.println(Jen.getGradeAverage());
 
 
+        students.put(Mark.name + 1999, Mark);
+        students.put(Sarah.name + 1999, Sarah);
+        students.put(Kyle.name + 1999, Kyle);
+        students.put(Jen.name + 1999, Jen);
 
-        students.put(Mark.name+1999, Mark);
-        students.put(Mark.name+1999, Sarah);
-        students.put(Mark.name+1999, Kyle);
-        students.put(Mark.name+1999, Jen);
+        System.out.println("Student Gradebook:  Please select a student to add, modify, or delete information");
+        Stack<String> people = new Stack<>();
+        Stack<Student> learners = new Stack<>();
+        String key = null;
+        for (Map.Entry<String, Student> entry : students.entrySet()) {
+            key = entry.getKey();
+            Student value = entry.getValue();
+            people.push(key);
+            learners.push(value);
+        }
+        System.out.println(people);
+        for (Map.Entry<String, Student> entry : students.entrySet()) {
+            key = entry.getKey();
+            Student value = entry.getValue();
+            System.out.println("Github account " + key + " belonging to " + value.name + ": has grades:");
+            System.out.println(value.grades);
+        }
+//        public String
     }
 }
