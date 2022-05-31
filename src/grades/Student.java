@@ -22,7 +22,7 @@ public class Student {
         return this.name;
     }
     // adds the given grade to the grades property
-    public void addGrade(double grade) {
+    public void addGrade(int grade) {
 
         this.grades.add((int) grade);
     }

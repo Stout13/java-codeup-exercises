@@ -1,12 +1,12 @@
 package grades;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
-public class StudentTest {
+public class GradesApplication extends Student {
     public static void main(String[] args) {
+        HashMap<String, Student> students = new HashMap<>();
         Student Mark = new Student("Mark");
         System.out.println(Mark.grades);
         Integer[] marksGrades = new Integer[]{100, 80, 95, 92, 88, 60};
@@ -47,5 +47,12 @@ public class StudentTest {
         Jen.addGrade(79);
         System.out.println(Jen.grades);
         System.out.println(Jen.getGradeAverage());
+
+
+
+        students.put(Mark.name+1999, Mark);
+        students.put(Mark.name+1999, Sarah);
+        students.put(Mark.name+1999, Kyle);
+        students.put(Mark.name+1999, Jen);
     }
 }
